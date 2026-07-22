@@ -19,10 +19,27 @@ Organização dos arquivos:
 Instruções para abrir o notebook no Colab:
 
 
-Modelos utilizados:
+Modelos Utilizados e Resultados:
+
+Para prever a qualidade do vinho tinto com base em suas características físico-químicas, foram treinados e avaliados diversos algoritmos de Machine Learning, divididos entre modelos baseline e ensembles:
+
+  Modelos Treinados
+
+- Baseline: Regressão Logística (Logistic Regression) e Árvore de Decisão (Decision Tree).
+- Ensembles Avançados: Random Forest, Gradient Boosting e XGBoost.
+- Otimização: Uso de GridSearchCV / RandomizedSearchCV combinado com validação cruzada para o ajuste de hiperparâmetros.
 
 
-Principais resultados:
+Principais Resultados
+
+- Melhor Modelo: Os algoritmos baseados em Ensemble (especialmente Random Forest e XGBoost) apresentaram o melhor desempenho geral, superando os modelos baseline em acurácia e F1-Score.
+- Métricas Principais:
+  - Aumento significativo no F1-Score e na AUC-ROC após o balanceamento dos dados e sintonia de hiperparâmetros.
+  - Alta capacidade de discriminação entre vinhos de qualidade superior e comum/inferior.
+- Variáveis mais Importantes (Feature Importance):
+  1. Teor Alcoólico (Alcohol): Principal preditor positivo de qualidade.
+  2. Sulfatos (Sulfates): Forte correlação positiva com melhores avaliações.
+  3. Acidez Volátil (Volatile Acidity): Principal indicador negativo (quanto maior a acidez volátil, menor a nota atribuída).
 
 
 Divisão das contribuições:
