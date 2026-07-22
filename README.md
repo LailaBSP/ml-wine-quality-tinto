@@ -56,3 +56,10 @@ Declaração do uso de inteligência artificial:
 - Finalidade: Foi usado para facilitar o entendimento da lógica de programação em algumas etapas e explicações lógicas da atividade.
 - Parte do trabalho que foi utilizada:
 - Forma de verificação do conteúdo produzido:
+- Parte do trabalho que foi utilizada: Auxílio na estruturação de sintaxe e refatoração de código Python.
+Sugestão de boas práticas para plotagem de gráficos e organização visual na análise exploratória.
+Geração dos textos explicativos e da documentação do projeto, visando otimizar o tempo de produção do material final.
+- Forma de verificação do conteúdo produzido: Apesar do uso de IA para a redação dos textos e suporte técnico, todo o desenvolvimento passou por uma verificação técnica rigorosa por parte dos autores:
+Validação dos Dados: Todos os dados carregados, pré-processados e transformados foram conferidos manualmente para garantir que não houvesse vazamento de dados (data leakage) ou distorções causadas por automações.
+Entendimento Preditivo: As métricas geradas pelos modelos (como F1-Score, Matriz de Confusão e Feature Importance) foram analisadas criticamente em função do problema de negócio, assegurando que o comportamento dos algoritmos fizesse sentido do ponto de vista estatístico e químico.
+Garantia de Autoria: O fluxo lógico, a tomada de decisão sobre quais algoritmos utilizar e a interpretação dos resultados finais foram conduzidos integralmente pelo grupo, garantindo domínio completo sobre a solução apresentada.
