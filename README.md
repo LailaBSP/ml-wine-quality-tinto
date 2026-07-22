@@ -16,7 +16,7 @@ Classificação multiclasse supervisionada, pois o objetivo é prever a faixa de
 Organização dos arquivos:
 
 
-Instruções para abrir o notbook no Colab:
+Instruções para abrir o notebook no Colab:
 
 
 Modelos utilizados:
