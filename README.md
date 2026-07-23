@@ -8,16 +8,24 @@ Integrantes:
 - Carolina Aragão Céu Melo
 
 Fonte dos dados:
+UCI Machine Learning Repository — Wine Quality Dataset
+Link: https://archive.ics.uci.edu/dataset/186/wine+quality
 
+Os dados são carregados diretamente da fonte pública dentro do próprio notebook, sem necessidade de download manual ou upload de arquivos locais.
 
 Tipo da tarefa:
 Classificação multiclasse supervisionada, pois o objetivo é prever a faixa de qualidade do vinho (ruim, médio ou bom) a partir de suas características.
 
 Organização dos arquivos:
-
-
+├── README.md                              # este arquivo
+└── Projeto_FIA_Qualidade_de_vinhos.ipynb  # notebook principal com todo o desenvolvimento:
+                                            # carregamento dos dados, análise exploratória,
+                                            # pré-processamento, modelagem e avaliação
 Instruções para abrir o notebook no Colab:
-
+1. Acesse o arquivo .ipynb neste repositório.
+2. Clique no botão "Open in Colab" (ou copie o link do notebook e abra diretamente em colab.research.google.com).
+3. Execute as células em ordem, de cima para baixo (ou use Ambiente de execução → Executar tudo).
+4. Os dados são carregados automaticamente de fonte pública, não sendo necessário nenhum download prévio ou upload de arquivos.
 
 Modelos Utilizados e Resultados:
 
