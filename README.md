@@ -30,26 +30,27 @@ Instruções para abrir o notebook no Colab:
 
 Modelos Utilizados e Resultados:
 
-Para prever a qualidade do vinho tinto com base em suas características físico-químicas, foram treinados e avaliados diversos algoritmos de Machine Learning, divididos entre modelos baseline e ensembles:
+Para prever a faixa de qualidade do vinho (ruim, médio, bom) com base em suas características físico-químicas, foram treinados e avaliados os seguintes modelos:
 
   Modelos Treinados
 
-- Baseline: Regressão Logística (Logistic Regression) e Árvore de Decisão (Decision Tree).
-- Ensembles Avançados: Random Forest, Gradient Boosting e XGBoost.
-- Otimização: Uso de GridSearchCV / RandomizedSearchCV combinado com validação cruzada para o ajuste de hiperparâmetros.
+- Baseline: DummyClassifier (estratégia "most frequent"), usado como referência mínima de comparação.
+- SGDClassifier (com class_weight='balanced'), modelo linear treinado sobre os dados padronizados.
+- RandomForestClassifier (com class_weight='balanced'), modelo de ensemble baseado em árvores de decisão.
 
+Ambos os modelos treinados usaram balanceamento de classe (class_weight='balanced') para lidar com o desbalanceamento identificado entre as faixas de qualidade, ao invés de reamostragem dos dados.
 
 Principais Resultados
 
-- Melhor Modelo: Os algoritmos baseados em Ensemble (especialmente Random Forest e XGBoost) apresentaram o melhor desempenho geral, superando os modelos baseline em acurácia e F1-Score.
-- Métricas Principais:
-  - Aumento significativo no F1-Score e na AUC-ROC após o balanceamento dos dados e sintonia de hiperparâmetros.
-  - Alta capacidade de discriminação entre vinhos de qualidade superior e comum/inferior.
-- Variáveis mais Importantes (Feature Importance):
-  1. Teor Alcoólico (Alcohol): Principal preditor positivo de qualidade.
-  2. Sulfatos (Sulfates): Forte correlação positiva com melhores avaliações.
-  3. Acidez Volátil (Volatile Acidity): Principal indicador negativo (quanto maior a acidez volátil, menor a nota atribuída).
+| Modelo                              | Acurácia | Precisão (Weighted) | Revocação (Weighted) | F1-Score (Weighted) |
+|--------------------------------------|----------|----------------------|------------------------|------------------------|
+| Baseline (Dummy - Most Frequent)     | 0,4370   | 0,1910               | 0,4370                 | 0,2658                 |
+| SGDClassifier                        | 0,5338   | 0,5658               | 0,5338                 | 0,5098                 |
+| RandomForestClassifier               | 0,6259   | 0,6301               | 0,6259                 | 0,6254                 |
 
+- Melhor Modelo: O RandomForestClassifier apresentou o melhor desempenho geral, superando tanto o baseline quanto o SGDClassifier em todas as métricas avaliadas.
+- O baseline (Dummy) confirma que os modelos treinados agregam valor real: o RandomForest teve um ganho de quase 19 pontos percentuais de acurácia em relação a apenas prever sempre a classe mais frequente.
+- O SGDClassifier, por ser um modelo linear, teve desempenho intermediário — indicando que a relação entre as características físico-químicas e a qualidade do vinho não é puramente linear.
 
 Divisão das contribuições:
 Todas as três integrantes contribuiram e ajudaram no desenvolvimentos das partes uma das outras, mas as divisões bases são as seguintes:
@@ -73,5 +74,5 @@ Geração dos textos explicativos e da documentação do projeto, visando otimiz
 - Forma de verificação do conteúdo produzido: Apesar do uso de IA para a redação dos textos e suporte técnico, todo o desenvolvimento passou por uma verificação técnica rigorosa por parte dos autores, entre elas:
 
 Validação dos Dados: Todos os dados carregados, pré-processados e transformados foram conferidos manualmente para garantir que não houvesse vazamento de dados (data leakage) ou distorções causadas por automações.
-Entendimento Preditivo: As métricas geradas pelos modelos (como F1-Score, Matriz de Confusão e Feature Importance) foram analisadas criticamente em função do problema de negócio, assegurando que o comportamento dos algoritmos fizesse sentido do ponto de vista estatístico e químico.
+Entendimento Preditivo: As métricas geradas pelos modelos (como F1-Score, Matriz de Confusão e Relatório de Classificação) foram analisadas criticamente em função do problema de negócio, assegurando que o comportamento dos algoritmos fizesse sentido do ponto de vista estatístico e químico.
 Garantia de Autoria: O fluxo lógico, a tomada de decisão sobre quais algoritmos utilizar e a interpretação dos resultados finais foram conduzidos integralmente pelo grupo, garantindo domínio completo sobre a solução apresentada.
