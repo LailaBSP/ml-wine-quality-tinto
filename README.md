@@ -59,6 +59,7 @@ Todas as três integrantes contribuiram e ajudaram no desenvolvimentos das parte
 
 Link do vídeo:
 
+https://youtu.be/lvMMCBTVoY8?is=Wv9bIXFrjgy27qdF
 
 Declaração do uso de inteligência artificial:
 - Ferramentas usadas: Claude e chatgpt
