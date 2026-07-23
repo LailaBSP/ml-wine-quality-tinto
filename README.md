@@ -15,6 +15,7 @@ Link: https://archive.ics.uci.edu/dataset/186/wine+quality
 Os dados são carregados diretamente da fonte pública dentro do próprio notebook, sem necessidade de download manual ou upload de arquivos locais.
 
 Tipo da tarefa:
+
 Classificação multiclasse supervisionada, pois o objetivo é prever a faixa de qualidade do vinho (ruim, médio ou bom) a partir de suas características.
 
 Organização dos arquivos:
