@@ -17,12 +17,9 @@ Tipo da tarefa:
 Classificação multiclasse supervisionada, pois o objetivo é prever a faixa de qualidade do vinho (ruim, médio ou bom) a partir de suas características.
 
 Organização dos arquivos:
-
-├── README.md                              # este arquivo
-└── Projeto_FIA_Qualidade_de_vinhos.ipynb  # notebook principal com todo o desenvolvimento:
-                                            # carregamento dos dados, análise exploratória,
-                                            # pré-processamento, modelagem e avaliação
-                                            
+- README.md — este arquivo
+- Projeto_FIA_Qualidade_de_vinhos.ipynb — notebook principal com todo o desenvolvimento: carregamento dos dados, análise exploratória, pré-processamento, modelagem e avaliação
+  
 Instruções para abrir o notebook no Colab:
 1. Acesse o arquivo .ipynb neste repositório.
 2. Clique no botão "Open in Colab" (ou copie o link do notebook e abra diretamente em colab.research.google.com).
